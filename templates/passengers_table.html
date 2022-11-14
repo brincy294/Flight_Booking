@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background-color:  #85acd9;  }
+</style>
+
+     
+
+<body>
+
+    <h1>Passengers Info</h1>
+
+    <div class="form-group">
+        <div class="center" style="margin-top: 0px;" >
+            <table class="table tr th">
+                <tr class="table__header">
+                {% for i in col_names %}
+                <th class="table__cell">{{ i }}</th>
+                {% endfor %}
+                </tr>
+                {% for j in data %}
+                <tr class="table__row">
+                {% for cell in j %}
+                <td class="table__cell">{{ j[cell]}}</td> 
+                {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+            <!-- <div class="row">		
+                <a href="/dashboard_test">Back to Dashboard</a>
+            </div> -->
+            </div>
+        </body>
+</body>
+</html>

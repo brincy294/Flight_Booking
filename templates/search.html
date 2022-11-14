@@ -1,0 +1,42 @@
+ <link rel="stylesheet" href="styles.css">
+ <style>
+
+    body {
+      margin:0;
+      padding:0;
+      font-family: sans-serif;
+      background: linear-gradient(#3f62a3, #85acd9);
+    }
+    .center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  margin-top:50px;
+}
+    
+        </style>
+        <p ><a style=" color:aliceblue; padding-left:10px;" href="{{ url_for('dash') }}"> Back</a></p>
+
+            <h1 style="text-align:center; padding-top: 30px;" p>Flight Booking</h1>
+				
+<div class="wrapper bg-white center">
+    <form action="/result" method = 'post'>
+        
+        <div class="form-group d-sm-flex margin">
+            <div class="  d-flex align-items-center flex-fill me-sm-4 my-sm-0 my-4 border-bottom position-relative">
+                <input type="text" name = "pick" required placeholder="From" class="form-control" style="height: 30px;">
+                <div class="label" id="from"></div>
+                <span class="fas fa-dot-circle text-muted"></span>
+            </div>
+            <div class=" d-flex align-items-center flex-fill ms-sm-1 my-sm-0 my-4 border-bottom position-relative" style="padding-top: 10px;">
+                <input type="text" name = "drop" required placeholder="To" class="form-control" style="height: 30px;">
+                <div class="label" id="to"style="padding-top: 10px;></div>
+                <span class="fas fa-map-marker text-muted"></span>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Check</button>
+    </form>
+
+
+</div>

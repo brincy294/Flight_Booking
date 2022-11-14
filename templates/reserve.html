@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+
+    body {
+      margin:0;
+      padding:0;
+      font-family: sans-serif;
+      background: linear-gradient(#3f62a3, #85acd9);
+    }
+    
+      </style>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto --> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="../static/css/mdb.min.css" />
+  
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  <style>
+ body {
+      margin:0;
+      padding:0;
+      font-family: sans-serif;
+      background: linear-gradient(#3f62a3, #85acd9);    }
+       
+        .center {
+        
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  margin-top:50px;
+}
+table, td, tr {
+  border: 1px solid;
+}
+.divs
+{
+  padding: 30px;
+}
+  </style>
+</head>
+
+<body >
+  <div class="center">
+  <table class="table">
+    <tr class="table__header">
+      {% for i in headings %}
+      <th class="table__cell">{{ i }}</th>
+      {% endfor %}
+    </tr>
+    {% for j in data %}
+    <tr class="table__row">
+      {% for cell in j %}
+      <td class="table__cell">{{ j[cell]}}</td> 
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+  <div class="divs">
+    <form action="/reservation" method = 'post'>
+      <div class="form-group d-sm-flex margin">
+       <div class="d-flex align-items-center flex-fill me-sm1 my-sm-0 border-bottom position-relative">
+           <input type="date" name = "d1" required placeholder="Depart Date" class="form-control">
+           <div class="label" id="depart"></div>
+       </div>
+       <div class="d-flex align-items-center flex-fill ms-sm-1 my-sm-0 my-4 border-bottom position-relative">
+           <input type="date" name = "d2" required placeholder="Return Date" class="form-control">
+           <div class="label" id="return"></div>
+       </div>
+       
+       <div class="d-flex align-items-center flex-fill ms-sm-1 my-sm-0 my-4 border-bottom position-relative">
+         <input type="text" name = "flight_id" required placeholder="Enter Flight Id for Booking" class="form-control">
+         <div class="label" id="to"></div>
+         <!-- <span class="fas fa-map-marker text-muted"></span> -->
+     </div>
+     <div class="d-flex align-items-center flex-fill ms-sm-1 my-sm-0 my-4 border-bottom position-relative">
+       <input type="text" name = "age" required placeholder="Enter Age" class="form-control">
+       <div class="label" id="age"></div>
+       <!-- <span class="fas fa-map-marker text-muted"></span> -->
+   </div>
+  </div>
+  
+  
+  
+    <button type="submit" class="btn btn-primary">Book</button>
+    
+  </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+---------Creating the Airlines Table---------
+
+create table flight (f_id varchar(255),
+a_name varchar(255),
+f_adest varchar (255),
+f_fdest varchar(255),
+f_atime time,
+f_ftime time,
+f_cost int
+);
+
+--------Inserting the values-----------------
+
+insert into flight (f_id,a_name,f_adest,f_fdest, f_atime, f_ftime, f_cost)
+values('SG815', 'spicejet', 'MUMBAI', 'DELHI',  '07:20:00', '09:35:00', 7200),
+('SG773','spicejet','CHENNAI','PUNE','13:35:00','15:15:00',8100),
+('SG731','spicejet','CHENNAI','HYDERBAD','06:20:00','07:30:00',5200),
+('SG3720','spicejet','GOA','BENGALURU','08:10:00','09:55:00',6500),
+('SG493','spicejet','PUNE','BENGALURU','17:25:00','19:55:00',8500),
+('UK-879','VISTARA','NEW DELHI','HYDERABAD','17:40:00','19:50:00',5000),
+('UK-811','VISTARA','NEW DELHI','BENGALURU','06:15:00','09:00:00',6528),
+('UK-819','VISTARA','MUMBAI','JAIPUR','20:00:00','06:45:00',4379),
+('UK-832','VISTARA','CHENNAI','PUNE','07:05:00','19:55:00',6927),
+('UK-835','VISTARA','LUCKNOW','GOA','17:50:00','13:50:00',8552),
+('G8395','GOAIR','MUMBAI','DELHI','01:45:00','03:30:00',5500),
+('G8461','GOAIR','NEW DELHI','CHENNAI','07:45:00','22:20:00',8500),
+('G8492','GOAIR','AURANGABAD','DELHI','08:00:00','23:00:00',5200),
+('G8911','GOAIR','AHEMDABAD','CHANDIGARH','09:00:00','10:00:00',8800),
+('G8702','GOAIR','AHEMDABAD','JAIPUR','16:30:00','17:55:00',4500),
+('AI-802','AIRINDIA','SRINAGAR','HYDERABAD','14:40:00','20:00:00',9200),
+('AI-821','AIRINDIA','HYDERABAD','JAIPUR','06:15:00','12:00:00',7500),
+('AI-815','AIRINDIA','BENGALURU','HARAYANA','07:00:00','07:30:00',6300),
+('AI-573','AIRINDIA','MUMBAI','DELHI','12:45:00','01:20:00',7800),
+('AI-550','AIRINDIA','LUCKNOW','MUMBAI','23:45:00','00:00:00',7500),
+('6E-5917','INDIGO','AGRA','BENGALURU','18:00:00','18:30:00',6650),
+('6E-544','INDIGO','AHMEDABAD','LUCKNOW','03:50:00','04:10:00',8245),
+('6E-0086','INDIGO','BANGKOK','DELHI','12:35:00','01:00:00',8500),
+('6E-0954','INDIGO','BENGALURU','KOLKATA','04:25:00','04:55:00',5550),
+('6E-0745','INDIGO','BHOPAL','SURAT','15:30:00','16:00:00',8500) ;
+
+
+
+
+

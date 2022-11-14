@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+
+  body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: linear-gradient(#3f62a3, #85acd9);
+  }
+  
+    </style>
+<script src=""></script>
+<table class="table">
+    <tr class="table__header">
+      {% for i in headings %}
+      <th class="table__cell">{{ i }}</th>
+      {% endfor %}
+    </tr>
+    {% for j in data %}
+    <tr class="table__row">
+      {% for cell in j %}
+      <td class="table__cell">{{ cell}}</td> 
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+<body>
+
+<img src="img_la.jpg" alt="LA" style="width:100%">
+
+<div class="">
+ <h1>This is a Heading</h1>
+ <p>This is a paragraph.</p>
+ <p>This is another paragraph.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+        body {
+          margin:0;
+          padding:0;
+          font-family: sans-serif;
+          background-color:#a0b9df;
+        }
+        .right {
+  position: absolute;
+  width: 300px;
+  padding: 10px;}
+  .normal
+  {
+    padding:50px;
+  }
+            </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p ><a style=" color:aliceblue; padding-left:10px;" href="{{ url_for('front') }}"> Back</a></p>
+
+    <div class="normal">
+        <h1>Admin Privileges</h1>
+
+    </div>
+    <div  class="right">
+        <div  class="normal">
+        <form  action="{{ url_for('add') }}" method="post">
+            <button type="submit" class="btn btn-primary">Add Flight</button>
+        </form>
+    </div>
+    <div class="normal">
+        <form  action="{{ url_for('delete') }}" method="post">
+            <button type="submit" class="btn btn-primary">Delete Flight</button>
+    
+        </form>
+    </div>
+    <div class="normal">
+        <form  action="{{ url_for('show') }}" method="post">
+            <button type="submit" class="btn btn-primary">Passengers Info</button>
+    
+        </form>
+    </div>
+</div>
+    
+</body>
+</html>

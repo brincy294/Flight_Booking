@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin:0;
+        padding:0;
+        font-family: sans-serif;
+        background-color:  #85acd9;  }
+        .container
+        {
+            padding: 30px;
+        }
+    </style>
+    
+<body>
+    <div class="row">		
+        <a href="{{ url_for('logout') }}"> Logout</a>
+    </div>
+    
+    <div class="container">
+        <h1>Passengers Info</h1>
+        <h2>Flight Details</h2>
+        <form action="{{ url_for('searchpass') }}" method="post">
+            {% if mesage is defined and mesage %}
+                <div class="alert alert-warning">{{ mesage }}</div>
+            {% endif %}
+            
+            <div class="form-group">
+                <label>Flight number</label>
+                <input type="text" class="form-control" id="flight_id" name="flight_id" placeholder="Flight no" name="text">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Check</button>
+            </form>
+            
+    </div>   
+
+    
+</body>
+</html>
